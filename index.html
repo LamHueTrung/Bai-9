@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <title>Tự học Lập Trình Cùng LHT</title>
+    <link rel="icon" href="http://abctech.vn/wp-content/uploads/2017/06/logo-nen-xanh.jpg" type="image/x-icon" />
+
+</head>
+<body>
+    <header class="header">
+        <ul class="header_list">
+            <li class="header_items header-menu">
+                    <i class="menu-mobile fas fa-bars"></i>
+            </li>
+            <ul class="header_list-mobile">
+
+                <li class="header_items">
+                    <a href="https://lamhuetrung.github.io/index.html">
+                        <i class="fas fa-home"></i>
+                        <span></span>
+                    </a>
+                </li>
+               
+                <li class="header_items">
+                    <a href="#bai-tap">
+                        <i class="fas fa-book"></i>
+                        <span></span>
+                    </a>
+                </li>
+                <li class="header_items">
+                    <a href="https://www.facebook.com/T%E1%BB%B1-h%E1%BB%8Dc-l%E1%BA%ADp-Tr%C3%ACnh-c%C3%B9ng-LHT-110968584718753">
+                        <i class="fas fa-question"></i>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="gird__column-2">
+            <div class="content_LT">
+                <div class="content__BT">
+                    <h1 class="BT__tieu-de">Mảng là gì</h1>
+                    <span class="BT__noi-dung">Mảng là một tập gồm nhiều phần tử có cùng kiểu dữ liệu. Ví dụ mảng kiểu int sẽ gồm nhiều phần tử có cùng kiểu int.</span>
+                    <span class="BT__noi-dung">Mảng được sử dụng trong các trường hợp như: có nhiều phần tử; các phần tử có cùng đặc điểm. Lấy ví dụ chương trình quản lý danh sách sinh viên => sử dụng mảng sinh viên, …</span>
+                    <h1 class="BT__tieu-de">Cú pháp khai báo mảng</h1>
+                    <span class="BT__noi-dung--TD">Kiểu_Dữ_Liệu Tên_Mảng[Số_Lượng_Phần_Tử];</span>
+                    <span class="BT__noi-dung">Ví dụ khai báo mảng để giải quyết yêu cầu của tình huống đã đặt ra ở đầu bài viết như sau</span>
+                    <pre class="BT__output-1">
+                        <code class="BT__output">
+int a[10];
+                    </code>
+                    </pre>
+                    <span class="BT__noi-dung--TD">Giải thích: </span>
+                    <span class="BT__noi-dung">int là kiểu dữ liệu; a là tên mảng và 10 là số lượng phần tử trong mảng, chính là số lượng số nguyên cần tính toán. </span>
+                    <span class="BT__noi-dung--TD">Tên mảng đặt theo qui tắc</span>
+                    <span class="BT__noi-dung">Không chứa khoảng trắng; Không chứa kí tự đặc biệt; Không trùng với từ khoá và Sử dụng tên gợi nhớ.</span>
+                    <h1 class="BT__tieu-de">Truy cập các phần tử của mảng</h1>
+                    <span class="BT__noi-dung">Thông qua chỉ số; Chỉ số trong lập trình C sẽ bắt đầu từ 0, nghĩa là phần tử thứ nhất có chỉ số là 0, phần tử thứ hai có chỉ số là 1 và cứ như thế cho đến phần tử thứ n sẽ có chỉ số là n-1.</span>
+                    <span class="BT__noi-dung--TD">Cú pháp truy cập phần tử của mảng</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+Tên_Mảng[Chỉ_Số];
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung--TD">Ví dụ truy cập các phần tử của mảng tên a</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+a[0] => phần  tử 1
+a[1] => phần  tử 2
+a[2] => phần  tử 3
+...
+a[n-1] => phần  tử n
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="content__HD">
+                <h1 class="BT__tieu-de">Các thao tác thường gặp trên mảng</h1>
+                    <span class="BT__noi-dung--TD">Nhập mảng</span>
+                    <span class="BT__noi-dung">Vì đặc điểm các phần tử của mảng có cùng kiểu dữ liệu và truy cập các phần tử của mảng thông qua chỉ số nên đối với xử lý mảng chúng ta LUÔN LUÔN sử dụng vòng lặp. Và cụ thể là vòng lặp for vì đã biết trước số lượng phần tử mảng cũng đồng nghĩa với việc biết trước số lần lặp.</span>
+                    <pre class="BT__output-1">
+                        <code class="BT__output">
+for(int i = 0; i < 10; i++) {   
+  scanf("%d", &a[i]); 
+}
+                    </code>
+                    </pre>
+                    <span class="BT__noi-dung">Giải thích</span>
+                    <pre class="BT__output-1">
+                        <code class="BT__output">
+i = 0 => scanf(“%d”, &a[0]);
+    => Nhập giá trị cho phần tử thứ nhất
+    
+i = 1 => scanf(“%d”, &a[1]); 
+    => Nhập giá trị cho phần tử thứ hai
+
+…	=> Tương tự như vậy cho các phần tử khác
+
+i = 9 => scanf(“%d”, &a[9]); 
+    => Nhập giá trị cho phần tử thứ mười
+
+                    </code>
+                    </pre>
+                    <span class="BT__noi-dung--TD">Hiển thị mảng</span>
+                    <pre class="BT__output-1">
+                        <code class="BT__output">
+for (int i = 0; i < 10; i++) {   
+  printf("%d", a[i]); 
+}
+                    </code>
+                    </pre>
+                    <span class="BT__noi-dung--TD">Tính tổng các phần tử của mảng</span>
+                    <pre class="BT__output-1">
+                        <code class="BT__output">
+int tong = 0; 
+for (int i = 0; i < 10; i++) {   
+ tong = tong + a[i]; 
+} 
+printf("Tong cac phan tu cua mang la %d", tong);
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung--TD">Tìm kiếm trên mảng</span>
+                    <pre class="BT__output-1">
+                        <code class="BT__output">
+int x; 
+printf("Nhap phan tu can tim x = "); 
+scanf("%d", &x); 
+
+for(int i = 0; i < 10; i++) {  
+  if(x == a[i]) {  
+     printf("%d co trong mang", x);   
+     break;  
+   } 
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung">Giải thích</span>
+                    <span class="BT__noi-dung">Nếu x có trong mảng tức x = a[i] thì hiển thị thông báo x có trong mảng và đồng thời kết thúc quá trình tìm kiếm bằng lệnh break. Lệnh break được sử dụng để kết thúc vòng lặp.</span>
+                    <a href="" class="btn-next not-next">Bài tiếp theo</a>
+            </div>
+    </div>
+</body>
+</html>
